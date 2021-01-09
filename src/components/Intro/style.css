@@ -1,0 +1,62 @@
+.container_intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #2a3d45;
+  width: 60%;
+  height: 40%;
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+  font-family: "VT323", monospace;
+  font-size: 24px;
+}
+.text-top {
+  width: fit-content;
+  margin-left: 20px;
+}
+.line {
+  position: relative;
+  top: 50%;
+  width: 6.5em;
+  margin: 0 auto;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  font-size: 180%;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-100%);
+}
+.anim-typewriter {
+  animation: typewriter 2s steps(15) 1s 1 normal both,
+    blinkTextCursor 700ms steps(15) infinite normal;
+}
+.anim-typewriter2 {
+  animation: typewriter2 3s steps(20) 1s 1 normal both,
+    blinkTextCursor 700ms steps(15) infinite normal;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 6.5em;
+  }
+}
+@keyframes typewriter2 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 12em;
+  }
+}
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}

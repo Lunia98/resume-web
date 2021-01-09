@@ -1,0 +1,15 @@
+.button-start {
+  margin-top: 2em;
+  width: fit-content;
+  font-family: "VT323", monospace;
+  font-size: 30px;
+  letter-spacing: 10px;
+  padding-left: 17px;
+  background: transparent;
+  color: #e0afa0;
+  border: 5px solid #e0afa0;
+}
+.button-start:hover {
+  transform: translateY(-5px);
+  filter: invert(100%);
+}
