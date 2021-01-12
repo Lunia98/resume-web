@@ -1,0 +1,33 @@
+.container_home {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: #ffffff;
+  font-family: "VT323", monospace;
+}
+.first_part {
+  margin-top: 10%;
+  margin-left: 5%;
+  width: 60%;
+  height: auto;
+  background-color: #b7b7a4;
+  border-radius: 5px;
+  font-size: 24px;
+  letter-spacing: 3px;
+  padding-left: 10px;
+  color: #343a40;
+}
+.second_part {
+  align-self: flex-end;
+  width: 60%;
+  height: auto;
+  margin: 4em;
+  background-color: #ddbea9;
+  border-radius: 5px;
+  font-size: 24px;
+  padding-left: 10px;
+  color: #343a40;
+}

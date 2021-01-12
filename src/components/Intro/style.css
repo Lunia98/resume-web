@@ -1,4 +1,11 @@
 .container_intro {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.command {
   display: flex;
   flex-direction: column;
   justify-content: space-between;

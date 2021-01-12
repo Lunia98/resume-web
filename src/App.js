@@ -1,13 +1,14 @@
 import "./App.css";
 import Intro from "./components/Intro/Intro";
-import ButtonStart from "./components/Button/ButtonStart";
+import Home from "./components/Home/Home";
+import { Route, Switch } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <Intro />
-      <ButtonStart />
-    </div>
+    <Switch>
+      <Route exact path="/" component={Intro} />
+      <Route exact path="/home" component={Home} />
+    </Switch>
   );
 }
 
