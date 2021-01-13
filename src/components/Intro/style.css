@@ -5,6 +5,28 @@
   justify-content: center;
   align-items: center;
 }
+
+.image_pixel {
+  background-image: url("../../images/LuPixel.png");
+  width: 294px;
+  height: 259px;
+  position: absolute;
+  transform: rotate(10deg);
+  top: 10%;
+  right: 10%;
+}
+.lips {
+  width: 31px;
+  height: 14px;
+  position: absolute;
+  background-color: transparent;
+  top: 80%;
+  left: 44.9%;
+  animation: speaking 250ms 12;
+  animation-timing-function: linear;
+
+  animation-delay: 1s;
+}
 .command {
   display: flex;
   flex-direction: column;
@@ -42,7 +64,16 @@
   animation: typewriter2 3s steps(20) 1s 1 normal both,
     blinkTextCursor 700ms steps(15) infinite normal;
 }
-
+@keyframes speaking {
+  0%,
+  50% {
+    background-color: transparent;
+  }
+  51%,
+  100% {
+    background-color: #370617;
+  }
+}
 @keyframes typewriter {
   from {
     width: 0;
