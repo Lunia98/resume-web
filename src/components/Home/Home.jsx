@@ -1,38 +1,78 @@
-import React from "react";
-import Graph from "./Graph/Graph";
+import React, { useEffect, useState, useRef } from "react";
 import "./style.css";
+import arrowleft from "../../images/arrowleft.png";
+import arrowright from "../../images/arrowright.png";
+import Projects from "../Projects/Projects";
 
 export default function Home() {
-  let skills = [
-    { name: "JavaScript", height: "180px" },
-    { name: "Python", height: "120px" },
-    { name: "React", height: "150px" },
-    { name: "Redux", height: "120px" },
-    { name: "HTML", height: "150px" },
-    { name: "CSS", height: "160px" },
-    { name: "Express", height: "120px" },
-    { name: "PostgreSQL", height: "140px" },
-  ];
+  const [pos, setPos] = useState(0);
+  const [left, setLeft] = useState(false);
+  const [right, setRight] = useState(false);
+
+  function useKey(key, cb) {
+    const callbackRef = useRef(cb);
+
+    useEffect(() => {
+      callbackRef.current = cb;
+    });
+    useEffect(() => {
+      function handle(event) {
+        if (event.keyCode === key) {
+          callbackRef.current(event);
+        }
+      }
+      document.addEventListener("keydown", handle);
+      document.addEventListener("keyup", handle);
+
+      return function () {
+        document.removeEventListener("keydown", handle);
+        document.removeEventListener("keyup", handle);
+      };
+    }, [key]);
+  }
+
+  const handleKeyDown = (event) => {
+    if (event.type === "keydown" && event.keyCode === 37) {
+      setLeft(!left);
+      setPos(pos - 1);
+    } else if (event.type === "keyup" && event.keyCode === 37) {
+      setLeft(!left);
+    } else if (event.type === "keydown" && event.keyCode === 39) {
+      setRight(!right);
+      setPos(pos + 1);
+    } else if (event.type === "keyup" && event.keyCode === 39) {
+      setRight(!right);
+    }
+  };
+
+  useKey(37, handleKeyDown);
+  useKey(39, handleKeyDown);
+
   return (
     <div className="container_home">
-      <div className="first_part">
-        <h3>Hola! Soy Lucia! FullStack Developer</h3>
-        <p style={{ letterSpacing: "1px" }}>
-          ¿Que podría contarte de mí? Hhmm.. Toco el piano desde chica, soy
-          compositora orquestal. Como todos se imaginan, el arte es muy
-          subjetivo, y yo necesitaba algo más concreto. Asique en la
-          programación encontré la hermosa combinación entre creatividad, arte y
-          objetividad!
-        </p>
-      </div>
-      <div className="second_part">
-        <h3 style={{ letterSpacing: "3px" }}>Estas son mis habilidades</h3>
-        <div style={{ display: "flex", justifyContent: "space-around" }}>
-          {skills.map((skill) => (
-            <Graph obj={skill} />
-          ))}
+      {pos === 0 && (
+        <div className={"presentation pos" + { pos }}>
+          <h1>Hi again! I'm Lucia Ayala!</h1>
+          <h3>
+            Just press the arrow keys on your keyboard to navigate this page.
+          </h3>
+          <div className="image_Lu_pixel" />
         </div>
+      )}
+      <div className="arrows">
+        <img
+          src={arrowleft}
+          alt="<--"
+          className={left ? "presskey arrow" : "arrow"}
+        />
+        <img
+          src={arrowright}
+          alt="-->"
+          className={right ? "presskey arrow" : "arrow"}
+        />
       </div>
+      {pos === 1 && <Projects />}
+      {pos === 2 && <div className="blue" />}
     </div>
   );
 }

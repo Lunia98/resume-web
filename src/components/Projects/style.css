@@ -1,0 +1,7 @@
+.container_aboutme {
+  width: 100%;
+  height: 55vh;
+  background-color: white;
+  display: flex;
+  font-family: "Poppins", sans-serif;
+}

@@ -1,33 +1,55 @@
 .container_home {
   width: 100%;
   height: auto;
+  font-family: "Inconsolata", monospace;
+}
+.presentation {
+  height: 100vh;
+  width: 100%;
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  background-color: #ffffff;
-  font-family: "VT323", monospace;
+  justify-content: center;
+  align-items: center;
 }
-.first_part {
-  margin-top: 10%;
-  margin-left: 5%;
-  width: 60%;
-  height: auto;
-  background-color: #b7b7a4;
-  border-radius: 5px;
-  font-size: 24px;
-  letter-spacing: 3px;
-  padding-left: 10px;
-  color: #343a40;
+.image_Lu_pixel {
+  background-image: url("../../images/LuPixel.png");
+  width: 294px;
+  height: 259px;
+  position: absolute;
+  transform: rotate(10deg);
+  top: 10%;
+  right: 10%;
 }
-.second_part {
-  align-self: flex-end;
-  width: 60%;
+.arrows {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 80%;
+  left: 24%;
+}
+.arrow {
+  width: 8em;
   height: auto;
-  margin: 4em;
-  background-color: #ddbea9;
-  border-radius: 5px;
-  font-size: 24px;
-  padding-left: 10px;
-  color: #343a40;
+}
+
+.presskey {
+  transform: translateY(20px);
+}
+.green {
+  height: 100vh;
+  width: 100%;
+  background-color: green;
+}
+.blue {
+  height: 100vh;
+  width: 100%;
+  background-color: blue;
+}
+.pos0 {
+}
+.pos1 {
+}
+.pos2 {
 }
