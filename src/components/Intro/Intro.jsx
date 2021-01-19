@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import LuPixel from "../../images/LuPixel.png";
 import "./style.css";
 
-export default function Intro() {
+export default function Intro({ setPos }) {
   const [state, setState] = useState(false);
   const [lips, setLips] = useState(true);
 
@@ -17,6 +17,9 @@ export default function Intro() {
       setLips(false);
     }, 2800);
   }, []);
+  const handleStart = () => {
+    setPos(1);
+  };
   const text = ["<h1>", "</h1>"];
   return (
     <div>
@@ -40,9 +43,11 @@ export default function Intro() {
             )}
           </div>
           <p className="text-top">{text[1]}</p>
-          <Link to="/home">
-            <ButtonStart />
-          </Link>
+          <div onClick={handleStart}>
+            <Link to="/home">
+              <ButtonStart />
+            </Link>
+          </div>
         </div>
       </div>
     </div>

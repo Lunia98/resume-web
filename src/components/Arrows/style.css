@@ -1,0 +1,26 @@
+.arrows {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 80%;
+  left: 24%;
+}
+.arrow {
+  width: 6em;
+  height: auto;
+}
+
+.presskey {
+  transform: translateY(20px);
+}
+.green {
+  height: 100vh;
+  width: 100%;
+  background-color: green;
+}
+.blue {
+  height: 100vh;
+  width: 100%;
+  background-color: blue;
+}
