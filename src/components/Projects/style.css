@@ -1,7 +1,35 @@
-.container_aboutme {
-  width: 100%;
-  height: 55vh;
-  background-color: white;
+.title_projects {
   display: flex;
-  font-family: "Poppins", sans-serif;
+  justify-content: center;
+  font-family: "Inconsolata", monospace;
+}
+.me_projects {
+  width: 7%;
+  height: auto;
+  transform: rotate(10deg);
+}
+.projects {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-top: 2em;
+}
+.images_projects {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+.image_project {
+  width: 60%;
+  display: flex;
+  align-self: center;
+  box-shadow: 1px 2px 3px #999;
+}
+.image_project:hover {
+  filter: brightness(0.4);
+  transition: 300ms;
+}
+.text_projects {
+  font-family: "Inconsolata", monospace;
+  text-align: center;
 }
