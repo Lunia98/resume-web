@@ -13,23 +13,32 @@
   justify-content: space-around;
   align-items: flex-start;
   margin-top: 2em;
-}
-.images_projects {
-  width: 30%;
-  display: flex;
   flex-direction: column;
 }
 .image_project {
-  width: 60%;
-  display: flex;
-  align-self: center;
+  width: 80%;
+  position: relative;
   box-shadow: 1px 2px 3px #999;
 }
-.image_project:hover {
-  filter: brightness(0.4);
-  transition: 300ms;
-}
-.text_projects {
+.text_projects{
+  position: absolute;
+  visibility: hidden;
+  bottom: 25%;
+  left: 25%;
   font-family: "Inconsolata", monospace;
   text-align: center;
+  color: white;
+  font-size: 30px;
+  width: 50%; 
+}
+
+.image_project:hover .text_projects{
+  visibility: visible;
+}
+.hover{ 
+  width: 100%;
+}
+.hover:hover {
+  filter: brightness(0.4);
+  transition: 300ms;
 }
