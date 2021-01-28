@@ -43,12 +43,12 @@ export default function Intro({ setPos }) {
             )}
           </div>
           <p className="text-top">{text[1]}</p>
+        </div>
           <div onClick={handleStart}>
             <Link to="/home">
               <ButtonStart />
             </Link>
           </div>
-        </div>
       </div>
     </div>
   );
