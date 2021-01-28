@@ -14,9 +14,10 @@ export default function Projects() {
       </div>
       <div className="projects">
         
-            <a href="https://github.com/Lunia98/iGiftyouE-commerce">
           <div className="image_project">
+            <a href="https://github.com/Lunia98/iGiftyouE-commerce">
               <img src={homeiGiftYou} alt="Oh no!" style={{ width: "100%" }} className='hover'/>
+            </a>
            <p className="text_projects">
             One of the final projects of Henry's bootcamp was to do an
             Ecommerce, it is a page that suggests gifts after answering a
@@ -27,7 +28,6 @@ export default function Projects() {
           </p>
          
         </div>
-            </a>
        
           <div className="image_project">
             <a href="https://lunia98.github.io/plants-website/">
