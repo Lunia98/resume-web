@@ -47,7 +47,7 @@ export default function Arrows({ setPos, pos }) {
   useKey(37, handleKeyDown);
   useKey(39, handleKeyDown);
   return (
-    <div className="arrows">
+    <div className={pos === 1 || pos === 0 ? "arrowsDown" : "arrowsUp"}>
       <img
         src={arrowleft}
         alt="<--"

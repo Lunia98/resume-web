@@ -12,6 +12,8 @@ function App() {
   const location = useLocation();
   var posLocation = function(){
     switch (location.pathname) {
+      case '/':
+        return 0
       case '/home':
         return 1
       case '/projects':
