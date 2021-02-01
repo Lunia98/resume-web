@@ -1,0 +1,11 @@
+.title_skills {
+    display: flex;
+    justify-content: center;
+    font-family: "Inconsolata", monospace;
+  }
+  .me_skills {
+    width: 6%;
+    height: auto;
+    transform: rotate(10deg);
+  }
+ 
