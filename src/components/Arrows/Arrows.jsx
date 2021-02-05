@@ -38,7 +38,7 @@ export default function Arrows({ setPos, pos }) {
       setLeft(!left);
     } else if (event.type === "keydown" && event.keyCode === 39) {
       setRight(!right);
-      setPos(pos !== 3 ? pos + 1 : 3);
+      setPos(pos !== 4 ? pos + 1 : 4);
     } else if (event.type === "keyup" && event.keyCode === 39) {
       setRight(!right);
     }
@@ -61,6 +61,7 @@ export default function Arrows({ setPos, pos }) {
       {pos === 1 && <Redirect to="/home" />}
       {pos === 2 && <Redirect to="/projects" />}
       {pos === 3 && <Redirect to="/skills" />}
+      {pos === 4 && <Redirect to="/contact" />}
     </div>
   );
 }

@@ -1,6 +1,25 @@
 html {
   background-color: #fff1e6;
   min-width: 100%;
+  color: transparent;
+  text-shadow: 0 0 0 #000000;
+}
+*:focus {
+  outline: none;
+}
+html::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  background-image: url("./images/background.jpg");
+  background-size: cover;
+  background-position: top center;
+  opacity: 0.1;
+  background-color: #fff1e6;
+  z-index: 0;
 }
 
 .App {

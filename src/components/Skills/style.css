@@ -1,11 +1,71 @@
 .title_skills {
-    display: flex;
-    justify-content: center;
-    font-family: "Inconsolata", monospace;
+  display: flex;
+  justify-content: center;
+  font-family: "Inconsolata", monospace;
+}
+.me_skills {
+  width: 6%;
+  height: auto;
+  transform: rotate(10deg);
+}
+.block {
+  width: 136px;
+  position: absolute;
+  top: 65%;
+  left: calc(50% - 68px);
+}
+.me_skills_block {
+  width: 56px;
+  height: auto;
+  position: absolute;
+  top: 80%;
+  left: 51%;
+}
+.icon {
+  width: 100%;
+}
+.text_skills {
+  font-family: "Inconsolata", monospace;
+  font-weight: bold;
+}
+.container_icon_skills {
+  width: 5%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.presskeyup {
+  transform: translateY(-50px);
+}
+.arrowUp {
+  visibility: hidden;
+  width: 7%;
+  position: absolute;
+  top: 80%;
+  left: 57%;
+}
+.arrowUp_animation {
+  animation: blin 1s linear infinite;
+  visibility: visible;
+}
+.animation {
+  animation-name: move;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+@keyframes move {
+  0% {
+    top: 50%;
+    left: 50%;
   }
-  .me_skills {
-    width: 6%;
-    height: auto;
-    transform: rotate(10deg);
+}
+@keyframes blin {
+  from {
+    opacity: 0.9;
   }
- 
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}

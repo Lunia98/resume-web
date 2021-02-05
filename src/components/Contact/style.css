@@ -1,0 +1,50 @@
+.container_contact {
+  content: "";
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  font-family: "Inconsolata", monospace;
+}
+.names_contact {
+  z-index: 5;
+}
+.send_email {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+  height: 60%;
+  z-index: 5;
+}
+
+.input {
+  margin: 1em;
+  border-radius: 5px;
+  border-color: transparent;
+  box-shadow: 1px 2px 3px #999;
+  height: 1.5em;
+}
+.message {
+  height: 40%;
+  resize: none;
+}
+.button_submit_contact {
+  width: fit-content;
+  font-family: "VT323", monospace;
+  font-size: 24px;
+  letter-spacing: 10px;
+  padding-left: 17px;
+  background: transparent;
+  color: #e0afa0;
+  border: 4px solid #e0afa0;
+  z-index: 5;
+  cursor: pointer;
+}
+.button_submit_contact:hover {
+  transform: translateY(-5px);
+  filter: invert(100%);
+}
