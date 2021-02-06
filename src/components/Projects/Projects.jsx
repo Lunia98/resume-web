@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import me from "../../images/LuPixel.png";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import { projects } from "../utils";
 import "./style.css";
 
 export default function Projects() {
   const handleOnClick = (e) => {
     let path = e.target.id;
-    window.location.href = path;
+    window.open(path);
   };
   const preload = projects.map((project) => (
     <img
@@ -16,6 +18,9 @@ export default function Projects() {
       className="hover"
     />
   ));
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
   return (
     <div>
       <div className="title_projects">
@@ -23,7 +28,12 @@ export default function Projects() {
         <img src={me} alt="Oh no!" className="me_projects" />
       </div>
       <div className="projects">
-        <div className="image_project">
+        <div
+          className="image_project"
+          data-aos="fade-right"
+          data-aos-delay="70"
+          data-aos-easing="ease-in-out"
+        >
           {preload[0]}
           <p
             className="text_projects"
@@ -39,7 +49,12 @@ export default function Projects() {
           </p>
         </div>
 
-        <div className="image_project">
+        <div
+          className="image_project"
+          data-aos="fade-left"
+          data-aos-delay="70"
+          data-aos-easing="ease-in-out"
+        >
           {preload[1]}
           <p
             className="text_projects"
@@ -51,7 +66,12 @@ export default function Projects() {
           </p>
         </div>
 
-        <div className="image_project">
+        <div
+          className="image_project"
+          data-aos="fade-right"
+          data-aos-delay="70"
+          data-aos-easing="ease-in-out"
+        >
           {preload[2]}
           <p
             className="text_projects"

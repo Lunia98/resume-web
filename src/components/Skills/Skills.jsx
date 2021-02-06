@@ -46,19 +46,25 @@ export default function Skills() {
   }
 
   const handleKeyDown = (event) => {
-    if (event.type === "keydown" && event.keyCode === 38) {
-      setUp(!up);
+    if (event.type === "keydown" && event.keyCode === 38 && countIcon < 14) {
+      setUp(true);
       setCountIcon(countIcon + 1);
       coin.setVolume(0.05).play();
-    } else if (event.type === "keyup" && event.keyCode === 38) {
-      setUp(!up);
+    } else if (
+      event.type === "keyup" &&
+      event.keyCode === 38 &&
+      countIcon < 14
+    ) {
+      setUp(false);
+    } else if (countIcon === 14) {
+      setUp(false);
     }
   };
 
   useKey(38, handleKeyDown);
 
   return (
-    <div>
+    <div style={{ height: "100vh" }}>
       <div className="title_skills">
         <h1>My skills!</h1>
         <img src={me} alt="Oh no!" className="me_skills" />
