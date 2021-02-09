@@ -17,7 +17,7 @@ export default function Home({ pos }) {
 
         <h2 style={{ width: "60%", textAlign: "center" }}>
           {lenguage
-            ? "Soy FullStack desarrolladora Web.  ¡Me encuentro buscando un trabajo que me desafíe día a día! Constantemente estoy mejorando mis conocimientos, soy proactiva y me encanta trabajar en equipo"
+            ? "Soy desarrolladora web FullStack.  ¡Me encuentro buscando un trabajo que me desafíe día a día! Constantemente estoy mejorando mis conocimientos, soy proactiva y me encanta trabajar en equipo"
             : "A FullStack Developer. I find myself looking for a job that challenges me every day! I am constantly improving my knowledge, I am proactive and I love working as a team!"}
         </h2>
 

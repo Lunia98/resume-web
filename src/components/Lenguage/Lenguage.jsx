@@ -22,7 +22,7 @@ export default function Lenguage() {
       }}
     >
       <LanguageIcon style={{ color: "black" }} />
-      <p>{lenguage ? "English" : "Español"}</p>
+      <p>{lenguage ? "Cambiar idioma" : "Change lenguage"}</p>
     </div>
   );
 }
