@@ -17,7 +17,7 @@ function App() {
   const location = useLocation();
   var posLocation = function () {
     switch (location.pathname) {
-      case "/":
+      case "/intro":
         return 0;
       case "/home":
         return 1;
@@ -41,7 +41,7 @@ function App() {
     <Switch>
       <Route exact path="/pdf" component={Pdf} />
       <Route path="/">
-        <Route exact path="/" render={() => <Intro setPos={setPos} />} />
+        <Route exact path="/intro" render={() => <Intro setPos={setPos} />} />
         <Route exact path="/home" render={() => <Home pos={pos} />} />
         <Route exact path="/projects" component={Projects} />
         <Route

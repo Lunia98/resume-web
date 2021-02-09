@@ -12,7 +12,7 @@ export default function Arrows({ setPos, pos }) {
   const handleKeyDown = (event) => {
     if (event.type === "keydown" && event.keyCode === 37) {
       setLeft(!left);
-      setPos(pos !== 1 ? pos - 1 : 1);
+      setPos(pos !== 0 ? pos - 1 : 0);
     } else if (event.type === "keyup" && event.keyCode === 37) {
       setLeft(!left);
     } else if (event.type === "keydown" && event.keyCode === 39) {
@@ -37,10 +37,11 @@ export default function Arrows({ setPos, pos }) {
         alt="-->"
         className={right ? "presskey arrow" : "arrow"}
       />
-      {pos === 1 && <Redirect to="/home" />}
-      {pos === 2 && <Redirect to="/projects" />}
-      {pos === 3 && <Redirect to="/skills" />}
-      {pos === 4 && <Redirect to="/contact" />}
+      {pos === 0 && <Redirect to="resume-web/home" />}
+      {pos === 1 && <Redirect to="resume-web/home" />}
+      {pos === 2 && <Redirect to="resume-web/projects" />}
+      {pos === 3 && <Redirect to="resume-web/skills" />}
+      {pos === 4 && <Redirect to="resume-web/contact" />}
     </div>
   );
 }
