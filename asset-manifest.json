@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/resume-web/static/css/main.0ad54456.chunk.css",
-    "main.js": "/resume-web/static/js/main.40a42b04.chunk.js",
-    "main.js.map": "/resume-web/static/js/main.40a42b04.chunk.js.map",
+    "main.js": "/resume-web/static/js/main.5c34f4ec.chunk.js",
+    "main.js.map": "/resume-web/static/js/main.5c34f4ec.chunk.js.map",
     "runtime-main.js": "/resume-web/static/js/runtime-main.c6f3e9d6.js",
     "runtime-main.js.map": "/resume-web/static/js/runtime-main.c6f3e9d6.js.map",
     "static/css/2.ec02d681.chunk.css": "/resume-web/static/css/2.ec02d681.chunk.css",
@@ -35,6 +35,7 @@
     "static/media/python.f7f12e1b.png": "/resume-web/static/media/python.f7f12e1b.png",
     "static/media/react.598c2743.png": "/resume-web/static/media/react.598c2743.png",
     "static/media/redux.4bebbe1e.png": "/resume-web/static/media/redux.4bebbe1e.png",
+    "static/media/resumeWeb.654dcc92.jpg": "/resume-web/static/media/resumeWeb.654dcc92.jpg",
     "static/media/scrum.1153ce7e.png": "/resume-web/static/media/scrum.1153ce7e.png",
     "static/media/selenium.06bfa849.png": "/resume-web/static/media/selenium.06bfa849.png",
     "static/media/sequelize.6e760b63.png": "/resume-web/static/media/sequelize.6e760b63.png"
@@ -44,6 +45,6 @@
     "static/css/2.ec02d681.chunk.css",
     "static/js/2.8a39be7d.chunk.js",
     "static/css/main.0ad54456.chunk.css",
-    "static/js/main.40a42b04.chunk.js"
+    "static/js/main.5c34f4ec.chunk.js"
   ]
 }
