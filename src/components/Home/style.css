@@ -20,8 +20,8 @@
   height: 30%;
   position: absolute;
   transform: rotate(10deg);
-  top: 10%;
-  right: 3%;
+  top: 5%;
+  right: -3%;
 }
 @media (max-width: 750px) {
   .presentation h2 {
