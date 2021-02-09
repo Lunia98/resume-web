@@ -1,34 +1,13 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import { Redirect } from "react-router-dom";
 import arrowleft from "../../images/arrowleft.png";
 import arrowright from "../../images/arrowright.png";
 import "./style.css";
+import useKey from "../Hooks/useKey";
 
 export default function Arrows({ setPos, pos }) {
   const [left, setLeft] = useState(false);
   const [right, setRight] = useState(false);
-
-  function useKey(key, cb) {
-    const callbackRef = useRef(cb);
-
-    useEffect(() => {
-      callbackRef.current = cb;
-    });
-    useEffect(() => {
-      function handle(event) {
-        if (event.keyCode === key) {
-          callbackRef.current(event);
-        }
-      }
-      document.addEventListener("keydown", handle);
-      document.addEventListener("keyup", handle);
-
-      return function () {
-        document.removeEventListener("keydown", handle);
-        document.removeEventListener("keyup", handle);
-      };
-    }, [key]);
-  }
 
   const handleKeyDown = (event) => {
     if (event.type === "keydown" && event.keyCode === 37) {

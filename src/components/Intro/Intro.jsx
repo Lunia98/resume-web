@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import ButtonStart from "../Button/ButtonStart";
+import ButtonStart from "../Buttons/ButtonStart/ButtonStart";
 import { Link } from "react-router-dom";
-import LuPixel from "../../images/LuPixel.png";
 import "./style.css";
 
 export default function Intro({ setPos }) {
@@ -23,8 +22,10 @@ export default function Intro({ setPos }) {
   const text = ["<h1>", "</h1>"];
   return (
     <div>
-      <div className="image_pixel">
-        <div className={lips && "lips"} />
+      <div className="container_image_pixel">
+        <div className="image_pixel">
+          <div className={lips && "lips"} />
+        </div>
       </div>
       <div className="container_intro">
         <div className="command">

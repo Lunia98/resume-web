@@ -37,6 +37,7 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+  align-items: center;
 }
 .arrowUp {
   visibility: hidden;
@@ -44,6 +45,17 @@
   position: absolute;
   top: 80%;
   left: 57%;
+}
+@media (max-width: 750px) {
+  .arrowUp {
+    display: none;
+  }
+  .container_icon_skills {
+    width: 10%;
+  }
+  .text_skills {
+    font-size: 11px;
+  }
 }
 .arrowUp_animation {
   animation: blin 1s linear infinite;

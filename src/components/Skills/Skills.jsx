@@ -1,49 +1,42 @@
-import React, { useState, useRef, useEffect } from "react";
+import React from "react";
 import "./style.css";
-import me from "../../images/LuPixel.png";
+import me from "../../images/LuLentes.png";
 import bloques from "../../images/bloques.png";
 import arrow_up from "../../images/arrow.png";
-import { icons } from "../utils";
+import { icons } from "../Utils/utils";
 import UIfx from "uifx";
 import coinSound from "../../images/mario_coin.mp3";
+import Titles from "../Utils/Titles/Titles";
+import useWindowsSize from "../Hooks/useWindowsSize";
+import useKey from "../Hooks/useKey";
 
-export default function Skills() {
-  const [countIcon, setCountIcon] = useState(0);
-  const [up, setUp] = useState(false);
-
+export default function Skills({ countIcon, setCountIcon, up, setUp }) {
   const coin = new UIfx(coinSound);
+  const size = useWindowsSize();
+
   const mappedIcons = icons.map((obj) => {
-    return (
-      <div
-        className="container_icon_skills animation"
-        style={{ top: "40%", left: obj.position }}
-      >
-        <img src={obj.icon} alt="Oh no!" className={"icon "} />
-        <p className={"text_skills"}>{obj.text}</p>
-      </div>
-    );
+    if (size.width > 750) {
+      return (
+        <div
+          className="container_icon_skills animation"
+          style={{ top: "40%", left: obj.position }}
+        >
+          <img src={obj.icon} alt="Oh no!" className={"icon "} />
+          <p className={"text_skills"}>{obj.text}</p>
+        </div>
+      );
+    } else {
+      return (
+        <div
+          className="container_icon_skills animation"
+          style={{ top: obj.positionUp, left: obj.positionLeft2 }}
+        >
+          <img src={obj.icon} alt="Oh no!" className={"icon "} />
+          <p className={"text_skills"}>{obj.text}</p>
+        </div>
+      );
+    }
   });
-
-  function useKey(key, cb) {
-    const callbackRef = useRef(cb);
-
-    useEffect(() => {
-      callbackRef.current = cb;
-    });
-    useEffect(() => {
-      function handle(event) {
-        if (event.keyCode === key) {
-          callbackRef.current(event);
-        }
-      }
-      document.addEventListener("keydown", handle);
-      document.addEventListener("keyup", handle);
-      return function () {
-        document.removeEventListener("keydown", handle);
-        document.removeEventListener("keyup", handle);
-      };
-    }, [key]);
-  }
 
   const handleKeyDown = (event) => {
     if (event.type === "keydown" && event.keyCode === 38 && countIcon < 14) {
@@ -65,10 +58,7 @@ export default function Skills() {
 
   return (
     <div style={{ height: "100vh" }}>
-      <div className="title_skills">
-        <h1>My skills!</h1>
-        <img src={me} alt="Oh no!" className="me_skills" />
-      </div>
+      <Titles title="My skills!" />
       <img src={bloques} alt="Oh no!" className="block" />
       <img
         src={me}
@@ -80,9 +70,11 @@ export default function Skills() {
         alt="Oh no!"
         className={countIcon === 0 ? "arrowUp arrowUp_animation" : "arrowUp "}
       />
-      {mappedIcons.map((icon) => {
-        return countIcon >= mappedIcons.indexOf(icon) + 1 && icon;
-      })}
+      <div>
+        {mappedIcons.map((icon) => {
+          return countIcon >= mappedIcons.indexOf(icon) + 1 && icon;
+        })}
+      </div>
     </div>
   );
 }

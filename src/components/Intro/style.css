@@ -6,23 +6,29 @@
   justify-content: center;
   align-items: center;
 }
-
-.image_pixel {
-  background-image: url("../../images/LuPixel.png");
-  width: 294px;
-  height: 259px;
+.container_image_pixel {
   position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 0;
+  left: 57%;
+}
+.image_pixel {
+  background-image: url("../../images/LuLentes.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  position: relative;
   transform: rotate(10deg);
-  top: 10%;
-  right: 10%;
 }
 .lips {
-  width: 31px;
-  height: 14px;
-  position: absolute;
+  width: 11%;
+  height: 5%;
+  position: relative;
   background-color: transparent;
-  top: 80%;
-  left: 44.9%;
+  top: 71%;
+  left: 46%;
   animation: speaking 250ms 12;
   animation-timing-function: linear;
 
@@ -40,6 +46,17 @@
   border-radius: 5px;
   font-family: "VT323", monospace;
   font-size: 24px;
+}
+@media (max-width: 850px) {
+  .command {
+    width: 90%;
+    height: 30%;
+    font-size: 14px;
+  }
+  .container_image_pixel {
+    width: 170px;
+    height: 170px;
+  }
 }
 .text-top {
   width: fit-content;

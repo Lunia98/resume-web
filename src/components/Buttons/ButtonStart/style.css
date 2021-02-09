@@ -1,5 +1,7 @@
 .button-start {
-  margin-top: 2em;
+  position: absolute;
+  top: 75%;
+  left: calc(50% - 71.5px);
   width: fit-content;
   font-family: "VT323", monospace;
   font-size: 30px;

@@ -13,11 +13,13 @@
   align-items: center;
 }
 .image_Lu_pixel {
-  background-image: url("../../images/LuPixel.png");
-  width: 294px;
-  height: 259px;
+  background-image: url("../../images/LuLentes.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 37%;
+  height: 30%;
   position: absolute;
   transform: rotate(10deg);
   top: 10%;
-  right: 10%;
+  right: 3%;
 }

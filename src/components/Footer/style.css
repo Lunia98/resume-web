@@ -1,0 +1,30 @@
+.container_footer {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  height: fit-content;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(213, 132, 120, 0.3);
+  display: flex;
+  justify-content: space-between;
+}
+.social_medias {
+  z-index: 10;
+  width: 25%;
+  display: flex;
+  justify-content: space-evenly;
+  align-self: flex-start;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+}
+.icon_Cv {
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+.text_footer {
+  font-family: "Inconsolata", monospace;
+  margin-right: 1em;
+}

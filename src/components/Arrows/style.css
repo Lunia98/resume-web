@@ -6,7 +6,7 @@
   top: 80%;
   left: 24%;
 }
-.arrowsUp{
+.arrowsUp {
   width: 50%;
   display: flex;
   justify-content: space-between;
@@ -27,8 +27,12 @@
   width: 100%;
   background-color: green;
 }
-.blue {
-  height: 100vh;
-  width: 100%;
-  background-color: blue;
+
+@media (max-width: 750px) {
+  .arrowsDown {
+    display: none;
+  }
+  .arrowsUp {
+    display: none;
+  }
 }

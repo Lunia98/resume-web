@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import me from "../../images/LuPixel.png";
 import emailjs from "emailjs-com";
 import swal from "sweetalert";
-import GitHubIcon from "@material-ui/icons/GitHub";
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import "./style.css";
+import Titles from "../Utils/Titles/Titles";
 
 export default function Contact() {
   const [input, setInput] = useState({
@@ -65,10 +63,7 @@ export default function Contact() {
   };
   return (
     <div>
-      <div className="title_skills">
-        <h1>Contact me!</h1>
-        <img src={me} alt="Oh no!" className="me_skills" />
-      </div>
+      <Titles title="Contact me!" />
       <form className="container_form" onSubmit={sendEmail}>
         <h1>Just send me an email!</h1>
         <div className="names_contact">
@@ -121,22 +116,6 @@ export default function Contact() {
         <button type="submit" className="button_submit_contact">
           SEND
         </button>
-        <div className="social_medias">
-          <a
-            rel="noopener noreferrer"
-            target="_BLANK"
-            href="https://www.linkedin.com/in/lunia98/"
-          >
-            <LinkedInIcon fontSize="large" style={{ color: "black" }} />
-          </a>
-          <a
-            rel="noopener noreferrer"
-            target="_BLANK"
-            href="https://github.com/Lunia98"
-          >
-            <GitHubIcon fontSize="large" style={{ color: "black" }} />
-          </a>
-        </div>
       </form>
     </div>
   );
