@@ -3,8 +3,10 @@ import emailjs from "emailjs-com";
 import swal from "sweetalert";
 import "./style.css";
 import Titles from "../Utils/Titles/Titles";
+import { useSelector } from "react-redux";
 
 export default function Contact() {
+  const lenguage = useSelector((state) => state.lenguage);
   const [input, setInput] = useState({
     name: "",
     lastName: "",
@@ -22,14 +24,24 @@ export default function Contact() {
       !input.subject ||
       !input.message
     ) {
-      return swal({ icon: "error", text: "Fields cannot be empty" });
+      return swal({
+        icon: "error",
+        text: lenguage
+          ? "Los campos no pueden estar vacíos"
+          : "Fields cannot be empty",
+      });
     } else if (
       !/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
         input.email
       )
     ) {
       setInput({ ...input, email: "" });
-      return swal({ icon: "error", text: "Oops! The email is not correct!" });
+      return swal({
+        icon: "error",
+        text: lenguage
+          ? "Ups! El email no es correcto!"
+          : "Oops! The email is not correct!",
+      });
     }
     emailjs
       .sendForm(
@@ -43,7 +55,9 @@ export default function Contact() {
           console.log(result.text);
           swal({
             icon: "success",
-            text: "Thanks for contacting me!",
+            text: lenguage
+              ? "Gracias por contactarte conmigo!"
+              : "Thanks for contacting me!",
           });
           setInput({
             name: "",
@@ -63,12 +77,14 @@ export default function Contact() {
   };
   return (
     <div>
-      <Titles title="Contact me!" />
+      <Titles title={lenguage ? "Contáctame" : "Contact me!"} />
       <form className="container_form" onSubmit={sendEmail}>
-        <h1>Just send me an email!</h1>
+        <h1>
+          {lenguage ? "¡Solo envíame un email!" : "Just send me an email!"}
+        </h1>
         <div className="names_contact">
           <div>
-            <label>First Name</label>
+            <label>{lenguage ? "Nombre" : "First Name"}</label>
             <input
               type="text"
               className="input"
@@ -78,7 +94,7 @@ export default function Contact() {
             />
           </div>
           <div>
-            <label>Last Name</label>
+            <label>{lenguage ? "Apellido" : "Last Name"}</label>
             <input
               type="text"
               className="input"
@@ -97,7 +113,7 @@ export default function Contact() {
             name="email"
             onChange={(e) => handleInputChange(e)}
           />
-          <label>Subject</label>
+          <label>{lenguage ? "Asunto" : "Subject"}</label>
           <input
             type="text"
             className="input"
@@ -105,7 +121,7 @@ export default function Contact() {
             name="subject"
             onChange={(e) => handleInputChange(e)}
           />
-          <label>Message</label>
+          <label>{lenguage ? "Mensaje" : "Message"}</label>
           <textarea
             className="input message"
             value={input.message}
@@ -114,7 +130,7 @@ export default function Contact() {
           />
         </div>
         <button type="submit" className="button_submit_contact">
-          SEND
+          {lenguage ? "ENVIAR" : "SEND"}
         </button>
       </form>
     </div>

@@ -15,30 +15,44 @@ import selenium from "../../images/icons/selenium.png";
 import homeiGiftYou from "../../images/projects/iGiftYou.png";
 import plantswebsite from "../../images/projects/plantswebsiteFullSize.jpg";
 import potrero from "../../images/projects/elpotreroFullSize.jpg";
+import resumeWeb from "../../images/projects/resumeWeb.jpg";
 
 export const projects = [
   {
     img: homeiGiftYou,
-    text:
-      "One of the final projects of Henry's bootcamp was to do an Ecommerce, it is a page that suggests gifts after answering a questionnaire. In this case I worked in a fullstack way, but it was focused on the question system, the cart and the catalog. Technologies: React, React-Bootstrap, Redux, NodeJS, Express, PostreSQL, Passport, Sequelize",
+    textEnglish:
+      "One of the final projects of Henry's bootcamp was to do an Ecommerce. It is a page that suggests gifts after answering a questionnaire. In this case I worked in a fullstack way, but it was focused on the question system, the cart and the catalog. Technologies: React, React-Bootstrap, Redux, NodeJS, Express, PostreSQL, Passport, Sequelize.",
+    textSpanish:
+      "Uno de los proyectos finales del bootcamp Henry fue hacer un Ecommerce. Esta es una página que sugiere regalos después de contestar un cuestionario. En este caso trabajé de manera fullstack, pero estuve enfocada en el sistema de preguntas, las tarjetas y el catálogo. Tecnologías: React, React-Bootstrap, Redux, NodeJS, Express, PostreSQL, Passport, Sequelize.",
     id: "https://github.com/Lunia98/iGiftyouE-commerce",
     animation: "fade-right",
   },
 
   {
     img: plantswebsite,
-    text:
+    textEnglish:
       "This is a small demonstration of my FrontEnd skills, I was inspired by a Pinterest design. Made with React and pure CSS.",
+    textSpanish:
+      "Esta es una pequeña demostración de mis habilidades en el FrontEnd inspirada por un diseño en Pinterest. Hecho con React y CSS puro.",
     id: "https://lunia98.github.io/plants-website/",
     animation: "fade-left",
   },
 
   {
     img: potrero,
-    text:
+    textEnglish:
       "I worked on the implementation of a registration form for a volunteer and the administration panel of Fundación el potrero. Using agile methodologies (SCRUM) and good practices in the code. My incidence was in the FrontEnd. Technologies: React, Material-UI, Redux, TypeScript.",
+    textSpanish:
+      "Trabajé en la implementación de un formulario de registro para voluntarios y en el panel de administración de la Fundación El potrero, usando metodologías ágiles (SCRUM) y buenas prácticas en el código. Mi incidencia fue en el FrontEnd. Tecnologías: React, Material-UI, Redux, TypeScript.",
     id: "https://entretiempo-staging.elpotrero.org/ ",
     animation: "fade-right",
+  },
+  {
+    img: resumeWeb,
+    textEnglish: "This website! Check the repository.",
+    textSpanish: "¡Esta página! Mira el repositorio.",
+    id: "https://github.com/Lunia98/resume-web ",
+    animation: "fade-left",
   },
 ];
 

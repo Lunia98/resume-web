@@ -56,6 +56,8 @@
   .container_image_pixel {
     width: 170px;
     height: 170px;
+    top: 20%;
+    left: 50%;
   }
 }
 .text-top {
@@ -97,7 +99,7 @@
     width: 0;
   }
   to {
-    width: 6.5em;
+    width: 6.7em;
   }
 }
 @keyframes typewriter2 {

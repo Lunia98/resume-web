@@ -9,8 +9,10 @@ import coinSound from "../../images/mario_coin.mp3";
 import Titles from "../Utils/Titles/Titles";
 import useWindowsSize from "../Hooks/useWindowsSize";
 import useKey from "../Hooks/useKey";
+import { useSelector } from "react-redux";
 
 export default function Skills({ countIcon, setCountIcon, up, setUp }) {
+  const lenguage = useSelector((state) => state.lenguage);
   const coin = new UIfx(coinSound);
   const size = useWindowsSize();
 
@@ -58,7 +60,7 @@ export default function Skills({ countIcon, setCountIcon, up, setUp }) {
 
   return (
     <div style={{ height: "100vh" }}>
-      <Titles title="My skills!" />
+      <Titles title={lenguage ? "Mis habilidades" : "My skills!"} />
       <img src={bloques} alt="Oh no!" className="block" />
       <img
         src={me}

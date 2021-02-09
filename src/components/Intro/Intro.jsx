@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import ButtonStart from "../Buttons/ButtonStart/ButtonStart";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import "./style.css";
 
 export default function Intro({ setPos }) {
+  const lenguage = useSelector((state) => state.lenguage);
   const [state, setState] = useState(false);
   const [lips, setLips] = useState(true);
 
@@ -24,7 +26,7 @@ export default function Intro({ setPos }) {
     <div>
       <div className="container_image_pixel">
         <div className="image_pixel">
-          <div className={lips && "lips"} />
+          <div className={lips ? "lips" : undefined} />
         </div>
       </div>
       <div className="container_intro">
@@ -33,20 +35,22 @@ export default function Intro({ setPos }) {
           <div style={{ position: "relative" }}>
             <p
               className="line anim-typewriter"
-              style={{ border: state && "none" }}
+              style={{ border: state ? "none" : undefined }}
             >
-              Oh! Hello there!
+              {lenguage ? "Oh! Hola a todos!" : "Oh! Hello there!"}
             </p>
             {state && (
               <p style={{ width: "12em" }} className="line anim-typewriter2">
-                I didn't realize you were here
+                {lenguage
+                  ? "No sabia que estabas aquí..."
+                  : "I didn't realize you were here"}
               </p>
             )}
           </div>
           <p className="text-top">{text[1]}</p>
         </div>
         <div onClick={handleStart} style={{ zIndex: 5 }}>
-          <Link to="/home">
+          <Link to="/resume-web/home">
             <ButtonStart />
           </Link>
         </div>

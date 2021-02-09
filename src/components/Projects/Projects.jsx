@@ -6,8 +6,10 @@ import "./style.css";
 import { projects } from "../Utils/utils";
 import Titles from "../Utils/Titles/Titles";
 import useWindowsSize from "../Hooks/useWindowsSize";
+import { useSelector } from "react-redux";
 
 export default function Projects() {
+  const lenguage = useSelector((state) => state.lenguage);
   const handleOnClick = (e) => {
     let path = e.target.id;
     window.open(path);
@@ -19,7 +21,7 @@ export default function Projects() {
 
   return (
     <div>
-      <Titles title="My projects!" />
+      <Titles title={lenguage ? "Mis proyectos" : "My projects!"} />
       <div className="projects">
         {projects.map((project, index) => (
           <div
@@ -43,11 +45,11 @@ export default function Projects() {
                 id={project.id}
                 onClick={(e) => handleOnClick(e)}
               >
-                {project.text}
+                {lenguage ? project.textSpanish : project.textEnglish}
               </p>
             ) : (
               <p className="text_projects" id={project.id}>
-                {project.text}
+                {lenguage ? project.textSpanish : project.textEnglish}
               </p>
             )}
           </div>

@@ -18,7 +18,7 @@ export default function ButtonMobile({
     if (e.target.value === "right") {
       setPos(pos !== 4 ? pos + 1 : 4);
     } else if (e.target.value === "left") {
-      setPos(pos !== 1 ? pos - 1 : 1);
+      setPos(pos !== 0 ? pos - 1 : 0);
     } else if (e.target.value === "up" && countIcon < 14) {
       setUp(!up);
       setCountIcon(countIcon + 1);
@@ -100,10 +100,11 @@ export default function ButtonMobile({
           value="bottom"
         />
       </div>
-      {pos === 1 && <Redirect to="/home" />}
-      {pos === 2 && <Redirect to="/projects" />}
-      {pos === 3 && <Redirect to="/skills" />}
-      {pos === 4 && <Redirect to="/contact" />}
+      {pos === 0 && <Redirect to="/resume-web/" />}
+      {pos === 1 && <Redirect to="/resume-web/home" />}
+      {pos === 2 && <Redirect to="/resume-web/projects" />}
+      {pos === 3 && <Redirect to="/resume-web/skills" />}
+      {pos === 4 && <Redirect to="/resume-web/contact" />}
     </div>
   );
 }

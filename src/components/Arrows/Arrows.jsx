@@ -37,11 +37,11 @@ export default function Arrows({ setPos, pos }) {
         alt="-->"
         className={right ? "presskey arrow" : "arrow"}
       />
-      {pos === 0 && <Redirect to="resume-web/home" />}
-      {pos === 1 && <Redirect to="resume-web/home" />}
-      {pos === 2 && <Redirect to="resume-web/projects" />}
-      {pos === 3 && <Redirect to="resume-web/skills" />}
-      {pos === 4 && <Redirect to="resume-web/contact" />}
+      {pos === 0 && <Redirect to="/resume-web/" />}
+      {pos === 1 && <Redirect to="/resume-web/home" />}
+      {pos === 2 && <Redirect to="/resume-web/projects" />}
+      {pos === 3 && <Redirect to="/resume-web/skills" />}
+      {pos === 4 && <Redirect to="/resume-web/contact" />}
     </div>
   );
 }
