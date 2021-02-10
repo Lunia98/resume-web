@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/resume-web/static/css/main.c01c4ab7.chunk.css",
-    "main.js": "/resume-web/static/js/main.da21305c.chunk.js",
-    "main.js.map": "/resume-web/static/js/main.da21305c.chunk.js.map",
+    "main.css": "/resume-web/static/css/main.03b1651a.chunk.css",
+    "main.js": "/resume-web/static/js/main.3a9adb1a.chunk.js",
+    "main.js.map": "/resume-web/static/js/main.3a9adb1a.chunk.js.map",
     "runtime-main.js": "/resume-web/static/js/runtime-main.ee35acf1.js",
     "runtime-main.js.map": "/resume-web/static/js/runtime-main.ee35acf1.js.map",
     "static/css/2.ec02d681.chunk.css": "/resume-web/static/css/2.ec02d681.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/3.f8311296.chunk.js.map": "/resume-web/static/js/3.f8311296.chunk.js.map",
     "index.html": "/resume-web/index.html",
     "static/css/2.ec02d681.chunk.css.map": "/resume-web/static/css/2.ec02d681.chunk.css.map",
-    "static/css/main.c01c4ab7.chunk.css.map": "/resume-web/static/css/main.c01c4ab7.chunk.css.map",
+    "static/css/main.03b1651a.chunk.css.map": "/resume-web/static/css/main.03b1651a.chunk.css.map",
     "static/js/2.97053ad2.chunk.js.LICENSE.txt": "/resume-web/static/js/2.97053ad2.chunk.js.LICENSE.txt",
     "static/media/style.css": "/resume-web/static/media/LuLentes.cb1e8ca6.png",
     "static/media/arrow.5904cf0f.png": "/resume-web/static/media/arrow.5904cf0f.png",
@@ -43,7 +43,7 @@
     "static/js/runtime-main.ee35acf1.js",
     "static/css/2.ec02d681.chunk.css",
     "static/js/2.97053ad2.chunk.js",
-    "static/css/main.c01c4ab7.chunk.css",
-    "static/js/main.da21305c.chunk.js"
+    "static/css/main.03b1651a.chunk.css",
+    "static/js/main.3a9adb1a.chunk.js"
   ]
 }
