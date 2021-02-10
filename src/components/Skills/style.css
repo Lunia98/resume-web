@@ -19,7 +19,7 @@
   height: auto;
   position: absolute;
   top: 80%;
-  left: 51%;
+  left: calc(50% + 15px);
 }
 .presskeyup {
   transform: translateY(calc(-15vh + 46px));
