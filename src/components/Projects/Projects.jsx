@@ -54,7 +54,7 @@ export default function Projects() {
             )}
           </div>
         ))}
-        ;
+        <div className="margin"></div>
       </div>
     </div>
   );
