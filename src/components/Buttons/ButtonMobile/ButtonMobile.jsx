@@ -65,7 +65,7 @@ export default function ButtonMobile({
           onClick={(e) => handleOnClick(e)}
         />
         <button
-          className="gameboy_button horizontal"
+          className={pos === 1 ? "gameboy_button horizontal gameboy_button_animation" : "gameboy_button horizontal"}
           value="right"
           onClick={(e) => handleOnClick(e)}
         />

@@ -17,8 +17,12 @@ export default function Home({ pos }) {
 
         <h2 style={{ width: "60%", textAlign: "center" }}>
           {lenguage
-            ? "Soy desarrolladora web FullStack.  ¡Me encuentro buscando un trabajo que me desafíe día a día! Constantemente estoy mejorando mis conocimientos, soy proactiva y me encanta trabajar en equipo"
-            : "A FullStack Developer. I find myself looking for a job that challenges me every day! I am constantly improving my knowledge, I am proactive and I love working as a team!"}
+            ? "Dije esto en febrero del 2021: Soy desarrolladora web FullStack.  ¡Me encuentro buscando un trabajo que me desafíe día a día! Constantemente estoy mejorando mis conocimientos, soy proactiva y me encanta trabajar en equipo."
+            : "I said this in February 2021: A FullStack Developer. I find myself looking for a job that challenges me every day! I am constantly improving my knowledge, I am proactive and I love working as a team!"}
+        </h2>
+        <br/>
+        <h2 style={{width: "60%", textAlign: 'center'}}>
+            {lenguage ? "Ahora: Trabajo como Software Engineer en Auth0! Muchas gracias a todos por el apoyo! :)" : "Now: I work as a Software Engineer at Auth0! Thank you very much for the support! :) "}
         </h2>
 
         {size.width < 750 ? (
